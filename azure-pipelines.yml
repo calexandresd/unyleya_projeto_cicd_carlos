@@ -4,10 +4,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- main
+- none
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'local'
 
 # Command line
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
