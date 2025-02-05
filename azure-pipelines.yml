@@ -70,9 +70,13 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
        artifactName: # 'drop'
-- task: VSBuild@1
+- task: VSTest@3
   inputs:
-    solution: '**\*.sln'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\bin\**\*test.dll
+      **\bin\**\*tests.dll
+    searchFolder: '$(System.DefaultWorkingDirectory)'
 
  
 
